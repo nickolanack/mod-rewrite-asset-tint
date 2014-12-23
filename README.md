@@ -13,6 +13,8 @@ asset-folder/
   .htaccess
   assets.php
   config.json
+  
+  //put easyimage folder here too
   easyimage/
     easyimage.php
     .htaccess
