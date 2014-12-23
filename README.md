@@ -1,6 +1,6 @@
 mod-rewrite-asset-tint
 ======================
-
+<img src="http://media.geolive.ca/assets/sm_widgets.png" /> + tint =
 <img src="http://media.geolive.ca/assets/sm_widgets.png?tint=rgb(29,29,100)" />
 <img src="http://media.geolive.ca/assets/sm_widgets.png?tint=rgb(100,29,100)" />
 <img src="http://media.geolive.ca/assets/sm_widgets.png?tint=rgb(29,100,100)" />
