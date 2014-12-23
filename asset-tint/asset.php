@@ -6,6 +6,28 @@ ini_set('error_log', dirname(__FILE__).DS.'DEBUG_error_log.txt');
 error_reporting(E_ALL);		//php 5 only
 
 
+if(!file_exists('config.json')){
+	die('File Not Found: '.__DIR__.DS.'config.json');
+}
+
+$config=json_decode(file_get_contents('config.json'));
+
+if(empty($config)){
+	die('Failed to decode json: config.json');
+}
+
+if(!key_exists('easyimage', $config)){
+	die('Missing Key: config.json->easyimage');
+}
+
+if(!file_exists($config->easyimage)){
+	die('File Not Found: config.json->easyimage:\''.$config->easyimage.'\'');
+}
+
+
+
+
+
 $default=dirname(__FILE__).DS;
 
 $file=dirname(__FILE__).DS.urldecode($_GET['file']);
@@ -33,7 +55,9 @@ $rgb[2]=(int) trim($r_2_sh);
 
 if(file_exists($file)&&in_array($ext, array('png', 'jpg', 'gif', 'jpeg'))){
 	
-	$toolpath=dirname(dirname(dirname(__FILE__))).DS.'library'.DS.'easyimage'.DS.'easyimage.php';
+	
+	//dirname(dirname(dirname(__FILE__))).DS.'library'.DS.'easyimage'.DS.'easyimage.php';
+	$toolpath=$config->easyimage;
 	include_once $toolpath;
 	$image=EasyImage::Open($file);
 	$s=EasyImage::GetSize($image);
