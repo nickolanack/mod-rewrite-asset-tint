@@ -36,7 +36,7 @@ asset-folder/
 	easyimage:'./easyimage/easyimage.php'
 }
 ```
-- point your browser to yoursite/icons/asset.php asset.php will display any issues or warnings.
+- point your browser to yoursite/icons/asset.php (or wherever you put it) asset.php will display any issues or warnings.
 - place icons in the root of the folder, or subdirectorys. you can now place images in html, and css ending with ?tint=rgb(r,g,b)
 and those icons will be served with the new tint color. 
 
