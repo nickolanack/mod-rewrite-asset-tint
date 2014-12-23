@@ -14,6 +14,8 @@ This packages allows a folder to be used for containing tintable icons on an apa
 
 - To use this script, create a web accessible folder heirarchy for icons. place the contents of the folder *asset-tint*
 from this repo in the root of the folder and easyimage (other repo) somewhere nearby
+
+###Example folder layout
 ```
 tint-icons/ 
   .htaccess
@@ -41,6 +43,7 @@ tint-icons/
 - place icons in the root of the folder, or subdirectories. 
 - you can now place images in html, and css ending with?tint=rgb(r,g,b) and those icons will be served with the new tint color. 
 
+###Terminal Setup
 ```bash
 mkdir tint-icons
 git clone https://github.com/nickolanack/mod-rewrite-asset-tint.git
@@ -53,7 +56,7 @@ cp EasyImage/easyimage/*tint-icons/
 #vi tint-icons/config.json #if neccessary
 
 ```
-
+###HTML/CSS Usage
 ```css
 .button{
 	background-image:url(yoursite/icons/icon1.png?tint=rgb(200,10,60));
