@@ -34,4 +34,13 @@ asset-folder/
 - place icons in the root of the folder, or subdirectorys. you can now place images in html, and css ending with ?tint=rgb(r,g,b)
 and those icons will be served with the new tint color. 
 
+```css
+.button{
+	background-image:url(yoursite/icons/icon1.png?tint=rgb(200,10,60));
+}
 
+```
+
+```html
+<img src="yoursite/icons/icon1.png?tint=rgb(200,10,60)" />
+```
