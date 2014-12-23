@@ -15,7 +15,7 @@ This packages allows a folder to be used for containing tintable icons on an apa
 - To use this script, create a web accessible folder heirarchy for icons. place the contents of the folder *asset-tint*
 from this repo in the root of the folder and easyimage (other repo) somewhere nearby
 ```
-asset-folder/
+tint-icons/ 
   .htaccess
   assets.php
   config.json
@@ -32,13 +32,27 @@ asset-folder/
 
 - update config.json so that easyimage.php can be found by asset.php (if not located the same as above)
 ```
+//contents of config.json
 {
 	easyimage:'./easyimage/easyimage.php'
 }
 ```
-- point your browser to yoursite/icons/asset.php (or wherever you put it) asset.php will display any issues or warnings.
-- place icons in the root of the folder, or subdirectorys. you can now place images in html, and css ending with ?tint=rgb(r,g,b)
-and those icons will be served with the new tint color. 
+- point your browser to yoursite/tint-icons/asset.php (or wherever you put it) asset.php will display any issues or warnings.
+- place icons in the root of the folder, or subdirectories. 
+- you can now place images in html, and css ending with?tint=rgb(r,g,b) and those icons will be served with the new tint color. 
+
+```bash
+mkdir tint-icons
+git clone https://github.com/nickolanack/mod-rewrite-asset-tint.git
+git clone https://github.com/nickolanack/EasyImage
+
+cp mod-rewrite-asset-tint/asset-tint/* tint-icons/
+cp mod-rewrite-asset-tint/asset-tint/.htaccess tint-icons/  #this is what routes image queries to assets.php 
+cp EasyImage/easyimage/*tint-icons/
+
+#vi tint-icons/config.json #if neccessary
+
+```
 
 ```css
 .button{
