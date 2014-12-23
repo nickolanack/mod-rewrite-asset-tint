@@ -1,6 +1,12 @@
 mod-rewrite-asset-tint
 ======================
 
+http://media.geolive.ca/assets/sm_widgets.png?tint=rgb(29,29,100)
+http://media.geolive.ca/assets/sm_widgets.png?tint=rgb(100,29,100)
+http://media.geolive.ca/assets/sm_widgets.png?tint=rgb(29,100,100)
+
+
+
 *requires: EasyImage from https://github.com/nickolanack/EasyImage*
 
 This packages allows a folder to be used for containing tintable icons on an apache server with *mod-rewrite* enabled and
