@@ -7,7 +7,7 @@ This packages allows a folder to be used for containing tintable icons on an apa
 *Allow Overrides* configured so that the .htaccess is read. 
 
 To use this script, create a web accessible folder heirarchy for icons. place the contents of the folder *asset-tint*
-in the root of the folder. and download and place easyimage somewhere nearby like this.
+from this repo in the root of the folder and easyimage (other repo) somewhere nearby
 ```
 asset-folder/
   .htaccess
