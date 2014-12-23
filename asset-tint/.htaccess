@@ -1,0 +1,4 @@
+#Redirect all image queries with url variable 'tint' to be processed by image.php
+RewriteEngine on
+RewriteCond %{QUERY_STRING} tint=(.*)
+RewriteRule ^(.+)\.(png|jpg|jpeg|gif)$ asset.php?file=$1.$2&tint=%1
