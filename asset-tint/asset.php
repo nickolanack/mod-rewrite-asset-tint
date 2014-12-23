@@ -10,6 +10,10 @@ if(!file_exists('config.json')){
 	die('File Not Found: '.__DIR__.DS.'config.json');
 }
 
+if(!function_exists('json_decode')){
+	die('Expected method: json_decode');
+}
+
 $config=json_decode(file_get_contents('config.json'));
 
 if(empty($config)){
@@ -25,6 +29,13 @@ if(!file_exists($config->easyimage)){
 }
 
 
+
+if(!(key_exists('file', $_GET)&&key_exists('file', $_GET))){
+	
+	//access to this file directly
+	echo 'mod-rewrite-asset-tint: <span style="color:green">success</span>';
+	return;
+}
 
 
 
