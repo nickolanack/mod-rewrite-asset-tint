@@ -19,8 +19,8 @@ asset-folder/
     easyimage.php
     .htaccess
     
-  icon1.png
-  icon2.png
+  icon1.png //your icons
+  icon2.png //could be in sub-directories
   ...
 ```
 
