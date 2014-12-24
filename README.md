@@ -36,7 +36,7 @@ tint-icons/
 ```
 //contents of config.json
 {
-	easyimage:'./easyimage/easyimage.php'
+	"easyimage":"./easyimage/easyimage.php"
 }
 ```
 - point your browser to yoursite/tint-icons/asset.php (or wherever you put it) asset.php will display any issues or warnings.
