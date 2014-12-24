@@ -47,7 +47,7 @@ tint-icons/
 ```bash
 mkdir tint-icons
 git clone https://github.com/nickolanack/mod-rewrite-asset-tint.git
-git clone https://github.com/nickolanack/EasyImage
+git clone https://github.com/nickolanack/EasyImage.git
 
 cp mod-rewrite-asset-tint/asset-tint/* tint-icons/
 cp mod-rewrite-asset-tint/asset-tint/.htaccess tint-icons/  #this is what routes image queries to assets.php 
